@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> fetchQuestions() async {
-    var res = await http.get("https://opentdb.com/api.php?amount=20");
+    var res = await http.get("https://opentdb.com/api.php?amount=3");
     var decRes = jsonDecode(res.body);
     print(decRes);
     c = Colors.black;
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Quiz App"),
+        title: Text("Scott's Quiz App"),
         elevation: 0.0,
       ),
       body: RefreshIndicator(
